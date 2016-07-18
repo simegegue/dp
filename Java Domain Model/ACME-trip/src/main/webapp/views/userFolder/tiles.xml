@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+ *
+ * Copyright (C) 2013 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="userFolder/inFolder" extends="master.page">	
+		<put-attribute name="title" value="In Folder" />
+		<put-attribute name="body" value="/views/userFolder/inFolder.jsp" />
+	</definition>
+	
+	<definition name="userFolder/outFolder" extends="master.page">	
+		<put-attribute name="title" value="Out Folder" />
+		<put-attribute name="body" value="/views/userFolder/outFolder.jsp" />
+	</definition>
+	
+	<definition name="userFolder/trashFolder" extends="master.page">	
+		<put-attribute name="title" value="Trash Folder" />
+		<put-attribute name="body" value="/views/userFolder/trashFolder.jsp" />
+	</definition>
+	
+	<definition name="userFolder/starredFolder" extends="master.page">	
+		<put-attribute name="title" value="Starred Folder" />
+		<put-attribute name="body" value="/views/userFolder/starredFolder.jsp" />
+	</definition>
+	
+	<definition name="userFolder/spamFolder" extends="master.page">	
+		<put-attribute name="title" value="Spam Folder" />
+		<put-attribute name="body" value="/views/userFolder/spamFolder.jsp" />
+	</definition>
+	
+	<definition name="userFolder/myFolder" extends="master.page">	
+		<put-attribute name="title" value="My folders" />
+		<put-attribute name="body" value="/views/userFolder/myFolder.jsp" />
+	</definition>
+
+</tiles-definitions>

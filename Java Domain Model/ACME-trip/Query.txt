@@ -1,0 +1,14 @@
+1)The total number of users who have registered to the system.
+	select count(c) from User c;
+
+2)The total number of trips that have been registered.
+	select count(t) from Trip t;
+	
+3)The average and the standard deviation of trips per user.
+	select (count(distinct p)/count(distinct c))*1.0 from User c,Trip p;
+	
+4)The average and the standard deviation of daily plans per trip.
+	select (count(distinct da)/count(distinct t))*1.0 from DailyPlan da,Trip t;
+
+5)The users who have registered at least 80% the maximum number of trips that a user has registered.
+	select u from User u join u.trips trips group by u having count(trips)>=(select count(t) from User c join c.trips t where c in(select o.user from Trip o group by o.user having count(o.user)>=all(select count(o.user) from Trip o group by o.user)))*0.8;
